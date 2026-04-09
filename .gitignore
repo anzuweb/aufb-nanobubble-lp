@@ -1,0 +1,14 @@
+# Google API
+token.json
+credentials.json
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# デバッグ用HTMLファイル
+debug_*.html
