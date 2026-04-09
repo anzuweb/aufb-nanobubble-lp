@@ -99,10 +99,16 @@
     .fv-worry-tag {
       background: #fff;
       border: 1px solid #bbb;
-      border-radius: 3px;
-      padding: 4px 12px;
-      font-size: 13px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      font-size: 12px;
       color: #555;
+      text-align: center;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .btn {
@@ -210,7 +216,7 @@
       border: 1px solid #ccc;
     }
 
-    /* ===== 6. 科学的検証 ===== */
+    /* ===== 6. 検証 ===== */
     .verify-grid {
       display: flex;
       gap: 16px;
@@ -357,7 +363,48 @@
       line-height: 1.8;
     }
 
-    /* ===== 9. FAQ ===== */
+    /* ===== 9. レビュー ===== */
+    .review-summary {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .review-stars {
+      font-size: 24px;
+      color: #e8a000;
+      letter-spacing: 2px;
+    }
+    .review-score {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 4px 0;
+    }
+    .review-count {
+      font-size: 13px;
+      color: #888;
+    }
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .review-item {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+    .review-item-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .review-item-stars { color: #e8a000; font-size: 14px; }
+    .review-item-title { font-weight: bold; font-size: 14px; }
+    .review-item-name { font-size: 12px; color: #888; margin-left: auto; }
+    .review-item-body { font-size: 13px; color: #555; line-height: 1.8; }
+
+    /* ===== 10. FAQ ===== */
     .faq-list {
       display: flex;
       flex-direction: column;
@@ -432,6 +479,8 @@
     <section>
       <h2>1. ファーストビュー</h2>
       <div id="fv">
+        <p style="font-size:12px;color:#888;letter-spacing:0.05em;">キッチン蛇口用ナノバブル発生装置</p>
+
         <div class="fv-image-placeholder">メインビジュアル<br>（キッチン使用シーン写真 / 製品画像）</div>
 
         <div style="width:100%;display:flex;flex-direction:column;gap:8px;margin-bottom:4px;">
@@ -441,9 +490,9 @@
         </div>
 
         <div class="fv-worries">
-          <span class="fv-worry-tag">食器洗いが楽になる</span>
-          <span class="fv-worry-tag">排水口のぬめり・臭い</span>
-          <span class="fv-worry-tag">食材の農薬・汚れ</span>
+          <span class="fv-worry-tag">高い洗浄力で<br>食器洗いを楽に</span>
+          <span class="fv-worry-tag">排水口のぬめり・<br>臭いを防ぐ</span>
+          <span class="fv-worry-tag">野菜の農薬が<br>気になる方に</span>
         </div>
         <a href="#" class="btn" style="display:block;width:100%;max-width:480px;text-align:center;">Amazonで詳細を見る</a>
       </div>
@@ -454,10 +503,9 @@
       <h2>2. お悩みセクション</h2>
       <p>こんなキッチンのお悩み、ありませんか？</p>
       <ul class="worry-list">
-        <li>食器の汚れがしっかり落ちているか気になる</li>
-        <li>洗剤をたくさん使わないと汚れが落ちない気がする</li>
-        <li>シンクや排水口のぬめり・嫌な臭いが取れない</li>
-        <li>野菜の農薬や細かい汚れが落ちているか不安</li>
+        <li>毎日の食器洗いが大変</li>
+        <li>シンクや排水溝がすぐ汚れるし、ニオイが気になる</li>
+        <li>野菜の農薬や汚れが落ちているか不安</li>
       </ul>
     </section>
 
@@ -468,26 +516,23 @@
       <div style="display:flex;gap:20px;align-items:flex-start;">
         <div style="width:200px;min-width:200px;height:180px;background:#ccc;border:2px dashed #aaa;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;text-align:center;padding:8px;">製品画像<br>（キッチン蛇口取り付けイメージ）</div>
         <div class="solution-box" style="flex:1;margin-top:0;">
-          AUFBナノバブル発生装置をキッチン蛇口に取り付けるだけ。<br>
-          今まで通り水を使うだけで、<strong>最大１億３千万個のナノバブル</strong>が汚れの奥まで入り込み、洗浄力をぐっと高めます。<br><br>
-          電気不要・洗剤不要。特別なことは何もいりません。
+          ナノバブル発生装置をキッチン蛇口に取り付けるだけ。<br>
+          今まで通り水を使うだけで、<strong>最大１億３千万個のナノバブル</strong>が汚れの奥まで入り込み、洗浄力をぐっと高めます。
         </div>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;margin-top:16px;">
+        <div class="solution-box" style="flex:1;margin-top:0;">
+          食器洗い・食材洗浄・シンク掃除に、1台で対応。<br>
+          360°首振り機能と、ストレート／シャワーの切り替えで、どんな用途にも対応。キッチン作業をもっとスムーズに。
+        </div>
+        <div style="width:200px;min-width:200px;height:180px;background:#ddd;border:2px dashed #aaa;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;text-align:center;padding:8px;">画像（首振り・切り替えイメージ）</div>
       </div>
     </section>
 
     <!-- 4. 効果説明 -->
     <section>
       <h2>4. 効果説明</h2>
-      <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">ナノバブル水で実感できる、キッチンの変化</p>
       <div class="effects">
-        <div class="effect-item">
-          <div class="effect-icon">🥬</div>
-          <div class="effect-body">
-            <h3>野菜の農薬・汚れをやさしく、しっかり落とす</h3>
-            <p>ナノバブルの泡は、野菜の表面の微細な凹凸にまで入り込み、農薬成分や細かい汚れをすみずみまで包み込んでやさしく洗い流します。水だけで、今まで以上の安心を。</p>
-            <div style="margin-top:8px;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;">画像（野菜洗浄イメージ）</div>
-          </div>
-        </div>
         <div class="effect-item">
           <div class="effect-icon">🍽️</div>
           <div class="effect-body">
@@ -505,49 +550,37 @@
           </div>
         </div>
         <div class="effect-item">
-          <div class="effect-icon">↕️</div>
+          <div class="effect-icon">🥬</div>
           <div class="effect-body">
-            <h3>食器洗い・食材洗浄・シンク掃除に、1台で対応</h3>
-            <p>360°首振り機能と、ストレート／シャワーの切り替えで、どんな用途にも対応。キッチン作業をもっとスムーズに。</p>
-            <div style="margin-top:8px;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;">画像（首振り・切り替えイメージ）</div>
+            <h3>野菜の農薬・汚れをやさしく、しっかり落とす</h3>
+            <p>ナノバブルの泡は、野菜の表面の微細な凹凸にまで入り込み、農薬成分や細かい汚れをすみずみまで包み込んでやさしく洗い流します。水だけで、今まで以上の安心を。</p>
+            <div style="margin-top:8px;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;">画像（野菜洗浄イメージ）</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. ナノバブルとは -->
+    <!-- 5. CTA -->
+    <section style="text-align:center;">
+      <h2>5. CTA</h2>
+      <a href="#" class="btn" style="display:inline-block;width:100%;max-width:480px;text-align:center;">Amazonで詳細を見る</a>
+    </section>
+
+    <!-- 6. ナノバブルとは -->
     <section>
-      <h2>5. ナノバブルとは</h2>
+      <h2>6. ナノバブルとは</h2>
       <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">毛穴より小さい泡だから、汚れの奥まで届く。</p>
       <div class="nano-layout">
         <div class="nano-image-placeholder">図解<br>（ナノバブルサイズ比較）</div>
         <div class="nano-text">
           ナノバブルの泡の大きさは0.001mm未満。肉眼では見えないほど極小の泡が、汚れの隙間に入り込み、界面活性力で汚れを剥がし取ります。
-          <table class="size-table">
-            <tr>
-              <th>比較対象</th>
-              <th>サイズ</th>
-            </tr>
-            <tr>
-              <td>毛穴</td>
-              <td>約0.1〜0.3mm</td>
-            </tr>
-            <tr>
-              <td>髪の毛</td>
-              <td>約0.08mm</td>
-            </tr>
-            <tr>
-              <td>ナノバブル</td>
-              <td><strong>0.001mm未満</strong></td>
-            </tr>
-          </table>
         </div>
       </div>
     </section>
 
-    <!-- 6. 科学的検証 -->
+    <!-- 5. 検証 -->
     <section>
-      <h2>6. 科学的検証</h2>
+      <h2>7. 検証</h2>
       <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">目で見てわかる、ナノバブルの洗浄力</p>
       <div class="verify-grid">
         <div class="verify-item">
@@ -570,37 +603,57 @@
       </div>
     </section>
 
-    <!-- 7. 品質アピール -->
+    <!-- 7. レビュー -->
     <section>
-      <h2>7. 品質アピール</h2>
-      <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">長く使える、高品質設計。</p>
-      <div class="quality-layout">
-        <div class="quality-list">
-          <div class="quality-item">
-            🔩 ナノバブル発生部分はオールステンレス製<br>
-            <strong>サビに強く、衛生的に長くお使いいただけます。</strong>
+      <h2>8. 実際に使った方の声</h2>
+      <div class="review-list">
+        <div class="review-item">
+          <div class="review-item-header">
+            <div style="width:36px;height:36px;background:#ccc;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">👤</div>
+            <span class="review-item-title">洗浄力！</span>
           </div>
-          <div class="quality-item">
-            🏆 特許取得済み（特許番号：7142386）<br>
-            <strong>独自のナノバブル発生技術を特許で保護しています。</strong>
-          </div>
-          <div class="quality-item">
-            🏭 自動車部品メーカーの品質規格で製造<br>
-            <strong>工業製品としての高い精度と耐久性を実現。</strong>
-          </div>
-          <div class="quality-item">
-            🇯🇵 日本製<br>
-            <strong>日本の品質基準で製造された安心設計。</strong>
-          </div>
+          <p class="review-item-body">鍋やフライパンの汚れが取れやすくなりました！おちゃわんのこびりついたご飯も。少しの間ナノバブルのお水に漬けておけば、その後がとっても楽。見えない泡なのにすごい。</p>
         </div>
-        <div class="quality-img-placeholder">製品画像<br>（クローズアップ）</div>
+        <div class="review-item">
+          <div class="review-item-header">
+            <div style="width:36px;height:36px;background:#ccc;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">👤</div>
+            <span class="review-item-title">排水口の汚れが取れました！</span>
+          </div>
+          <p class="review-item-body">使って数日ですが、排水口の汚れやヌメリが水を使っているだけで取れてます！キッチンハイターなどの使用回数が減りますね。食器のすすぎの際も泡切れが早く感じます。手荒れも落ち着いてきてるので、肌にも優しいのではないでしょうか。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align:center;">
+      <h2>CTA</h2>
+      <a href="#" class="btn" style="display:inline-block;width:100%;max-width:480px;text-align:center;">Amazonで詳細を見る</a>
+    </section>
+
+    <!-- 9. 品質アピール -->
+    <section>
+      <h2>10. 品質アピール</h2>
+      <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">長く使える、高品質設計。</p>
+      <div style="display:flex;gap:16px;">
+        <div class="quality-item" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:100%;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;margin-bottom:10px;">画像（特許イメージ）</div>
+          🏆 特許取得済み（特許番号：7142386）
+        </div>
+        <div class="quality-item" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:100%;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;margin-bottom:10px;">画像（製造現場イメージ）</div>
+          🏭 創業80年・日本の自動車部品メーカー規格で製造
+        </div>
+        <div class="quality-item" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:100%;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;margin-bottom:10px;">画像（ステンレス素材イメージ）</div>
+          🔩 ナノバブル発生部分はオールステンレス製
+        </div>
       </div>
       <div class="quality-tagline">一度手に入れたら、長く使い続けられる設計です。</div>
     </section>
 
-    <!-- 8. 簡単取り付け -->
+    <!-- 7. 簡単取り付け -->
     <section>
-      <h2>8. 簡単取り付け</h2>
+      <h2>11. 簡単取り付け</h2>
       <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">工具不要！今お使いの蛇口に取り付けるだけ</p>
       <div class="install-layout">
         <div class="steps">
@@ -636,9 +689,9 @@
       </div>
     </section>
 
-    <!-- 9. FAQ -->
+    <!-- 10. FAQ -->
     <section>
-      <h2>9. よくあるご質問</h2>
+      <h2>12. よくあるご質問</h2>
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-q">Q. 本当に汚れが落ちますか？</div>
@@ -659,9 +712,9 @@
       </div>
     </section>
 
-    <!-- 10. 最終CTA -->
+    <!-- 9. 最終CTA -->
     <section id="final-cta">
-      <h2>10. 最終CTA</h2>
+      <h2>13. 最終CTA</h2>
       <p class="closing-copy">キッチンのお悩みを、蛇口を替えるだけで解決。</p>
       <p class="closing-sub">取り付けはたったの3ステップ。<br>今日から毎日のキッチン作業が、ナノバブルで変わります。</p>
       <div style="width:160px;height:160px;background:#ccc;border:2px dashed #aaa;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;margin:0 auto 24px;">製品画像（メイン）</div>
