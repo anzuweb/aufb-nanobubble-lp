@@ -24,7 +24,7 @@
     }
 
     section {
-      max-width: 680px;
+      max-width: 960px;
       margin: 0 auto 24px;
       background: #fff;
       border: 2px solid #bbb;
@@ -58,14 +58,22 @@
     /* ===== 1. ファーストビュー ===== */
     #fv {
       background: #e8e8e8;
-      text-align: center;
-      padding: 48px 32px;
-      min-height: 320px;
+      padding: 32px;
+    }
+    .fv-layout {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .fv-left {
+      flex: 1;
+    }
+    .fv-right {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
+      text-align: center;
     }
     #fv .fv-image-placeholder {
       width: 100%;
@@ -452,19 +460,74 @@
       padding: 24px 0 60px;
     }
 
+    /* ===== 共通レイアウト ===== */
+    .img-text-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .img-placeholder-left {
+      width: 200px;
+      min-width: 200px;
+      height: 180px;
+      background: #ccc;
+      border: 2px dashed #aaa;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px;
+    }
+    .img-placeholder-right {
+      width: 200px;
+      min-width: 200px;
+      height: 180px;
+      background: #ddd;
+      border: 2px dashed #aaa;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px;
+    }
+    .quality-grid {
+      display: flex;
+      gap: 16px;
+    }
+
     /* ===== レスポンシブ ===== */
     @media (max-width: 600px) {
       .page-wrapper { padding: 16px 12px; }
       section { padding: 20px 16px; }
-      #fv { padding: 32px 16px; }
+      #fv { padding: 20px 16px; }
       #fv .fv-catch { font-size: 20px; }
+      .fv-layout { flex-direction: column; }
+      .fv-right { width: 100%; }
+      .fv-worries { gap: 6px; }
+      .fv-worry-tag { width: 88px; height: 88px; font-size: 11px; }
+      .img-text-row { flex-direction: column; }
+      .img-text-row-reverse { flex-direction: column-reverse; }
+      .img-placeholder-left, .img-placeholder-right {
+        width: 100%;
+        min-width: unset;
+        height: 140px;
+      }
       .nano-layout, .quality-layout, .install-layout { flex-direction: column; }
       .nano-image-placeholder, .quality-img-placeholder, .install-img-placeholder {
         width: 100%;
         min-width: unset;
       }
+      .quality-grid { flex-direction: column; }
+      .quality-item { flex: none !important; }
       .verify-grid { flex-direction: column; }
       .btn { display: block; text-align: center; padding: 14px 16px; }
+      .review-item-name { display: none; }
     }
   </style>
 </head>
@@ -479,22 +542,25 @@
     <section>
       <h2>1. ファーストビュー</h2>
       <div id="fv">
-        <p style="font-size:12px;color:#888;letter-spacing:0.05em;">キッチン蛇口用ナノバブル発生装置</p>
-
-        <div class="fv-image-placeholder">メインビジュアル<br>（キッチン使用シーン写真 / 製品画像）</div>
-
-        <div style="width:100%;display:flex;flex-direction:column;gap:8px;margin-bottom:4px;">
-          <div style="background:#fffbe6;border:2px solid #aaa;border-radius:4px;padding:10px 16px;text-align:center;">
-            <span style="font-size:18px;font-weight:bold;color:#222;">キッチンの蛇口に付けるだけ。<br>毎日の洗い物を、ナノバブルがお手伝い。</span>
+        <div class="fv-layout">
+          <!-- 左：メインビジュアル -->
+          <div class="fv-left">
+            <p style="font-size:12px;color:#888;letter-spacing:0.05em;margin-bottom:8px;text-align:center;">キッチン蛇口用ナノバブル発生装置</p>
+            <div class="fv-image-placeholder">メインビジュアル<br>（キッチン使用シーン写真 / 製品画像）</div>
+          </div>
+          <!-- 右：テキスト・アピール・CTA -->
+          <div class="fv-right">
+            <div style="background:#fffbe6;border:2px solid #aaa;border-radius:4px;padding:10px 16px;text-align:center;margin-bottom:16px;">
+              <span style="font-size:18px;font-weight:bold;color:#222;">キッチンの蛇口に付けるだけ。<br>毎日の洗い物を、ナノバブルがお手伝い。</span>
+            </div>
+            <div class="fv-worries" style="margin-bottom:16px;">
+              <span class="fv-worry-tag">高い洗浄力で<br>食器洗いを楽に</span>
+              <span class="fv-worry-tag">排水口のぬめり・<br>臭いを防ぐ</span>
+              <span class="fv-worry-tag">野菜の農薬が<br>気になる方に</span>
+            </div>
+            <a href="#" class="btn" style="display:block;width:100%;text-align:center;">Amazonで詳細を見る</a>
           </div>
         </div>
-
-        <div class="fv-worries">
-          <span class="fv-worry-tag">高い洗浄力で<br>食器洗いを楽に</span>
-          <span class="fv-worry-tag">排水口のぬめり・<br>臭いを防ぐ</span>
-          <span class="fv-worry-tag">野菜の農薬が<br>気になる方に</span>
-        </div>
-        <a href="#" class="btn" style="display:block;width:100%;max-width:480px;text-align:center;">Amazonで詳細を見る</a>
       </div>
     </section>
 
@@ -513,19 +579,19 @@
     <section>
       <h2>3. ソリューション紹介</h2>
       <p style="font-weight:bold;font-size:16px;margin-bottom:12px;">ナノバブルが、キッチンのお悩みをまとめて解決します。</p>
-      <div style="display:flex;gap:20px;align-items:flex-start;">
-        <div style="width:200px;min-width:200px;height:180px;background:#ccc;border:2px dashed #aaa;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;text-align:center;padding:8px;">製品画像<br>（キッチン蛇口取り付けイメージ）</div>
+      <div class="img-text-row">
+        <div class="img-placeholder-left">製品画像<br>（キッチン蛇口取り付けイメージ）</div>
         <div class="solution-box" style="flex:1;margin-top:0;">
           ナノバブル発生装置をキッチン蛇口に取り付けるだけ。<br>
           今まで通り水を使うだけで、<strong>最大１億３千万個のナノバブル</strong>が汚れの奥まで入り込み、洗浄力をぐっと高めます。
         </div>
       </div>
-      <div style="display:flex;gap:20px;align-items:flex-start;margin-top:16px;">
+      <div class="img-text-row img-text-row-reverse" style="margin-top:16px;">
         <div class="solution-box" style="flex:1;margin-top:0;">
           食器洗い・食材洗浄・シンク掃除に、1台で対応。<br>
-          360°首振り機能と、ストレート／シャワーの切り替えで、どんな用途にも対応。キッチン作業をもっとスムーズに。
+          45°首振り機能と、ストレート／シャワーの切り替えで、あらゆるシーンで活躍。キッチン作業をもっとスムーズに。
         </div>
-        <div style="width:200px;min-width:200px;height:180px;background:#ddd;border:2px dashed #aaa;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;text-align:center;padding:8px;">画像（首振り・切り替えイメージ）</div>
+        <div class="img-placeholder-right">画像（首振り・切り替えイメージ）</div>
       </div>
     </section>
 
@@ -563,17 +629,19 @@
     <!-- 5. CTA -->
     <section style="text-align:center;">
       <h2>5. CTA</h2>
+      <p style="font-size:16px;font-weight:bold;margin-bottom:8px;">蛇口に取り付けるだけ。今すぐ試してみませんか？</p>
+      <p style="font-size:13px;color:#666;margin-bottom:20px;">工具不要・3ステップで簡単取り付け。Amazonで購入できます。</p>
       <a href="#" class="btn" style="display:inline-block;width:100%;max-width:480px;text-align:center;">Amazonで詳細を見る</a>
     </section>
 
     <!-- 6. ナノバブルとは -->
     <section>
       <h2>6. ナノバブルとは</h2>
-      <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">毛穴より小さい泡だから、汚れの奥まで届く。</p>
+      <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">肉眼では見えないほどの極小の泡が、汚れの隙間に入り込む。</p>
       <div class="nano-layout">
         <div class="nano-image-placeholder">図解<br>（ナノバブルサイズ比較）</div>
         <div class="nano-text">
-          ナノバブルの泡の大きさは0.001mm未満。肉眼では見えないほど極小の泡が、汚れの隙間に入り込み、界面活性力で汚れを剥がし取ります。
+          ナノバブルの泡の大きさは0.001mm未満。汚れの隙間に入り込み、界面活性力で汚れを剥がし取ります。
         </div>
       </div>
     </section>
@@ -596,8 +664,8 @@
         <div class="verify-item">
           <div class="verify-img-placeholder">画像<br>（排水口 設置1日後 ビフォーアフター）</div>
           <div class="verify-caption">
-            <strong>排水口のぬめりに、設置1日で変化が</strong>
-            AUFBを取り付けてから1日後の排水口。こすり洗い等なしで、目に見えてぬめりが改善されました。
+            <strong>排水口のぬめりが、設置1日で変化</strong>
+            ナノバブル発生装置を付けてから1日後の排水口。こすり洗い等なしで、目に見えてぬめりが改善されました。
           </div>
         </div>
       </div>
@@ -627,6 +695,8 @@
     <!-- CTA -->
     <section style="text-align:center;">
       <h2>CTA</h2>
+      <p style="font-size:16px;font-weight:bold;margin-bottom:8px;">多くの方が実感したナノバブルの洗浄力を、ぜひ体験してみてください。</p>
+      <p style="font-size:13px;color:#666;margin-bottom:20px;">Amazonでレビューもご確認いただけます。</p>
       <a href="#" class="btn" style="display:inline-block;width:100%;max-width:480px;text-align:center;">Amazonで詳細を見る</a>
     </section>
 
@@ -634,7 +704,7 @@
     <section>
       <h2>10. 品質アピール</h2>
       <p style="font-weight:bold;font-size:15px;margin-bottom:16px;">長く使える、高品質設計。</p>
-      <div style="display:flex;gap:16px;">
+      <div class="quality-grid">
         <div class="quality-item" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
           <div style="width:100%;height:100px;background:#ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;margin-bottom:10px;">画像（特許イメージ）</div>
           🏆 特許取得済み（特許番号：7142386）
@@ -707,7 +777,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">Q. どんな蛇口に取り付けられますか？</div>
-          <div class="faq-a">外ネジタイプ（M22×1.25）に標準対応しています。付属のアダプターを使用することで内ネジタイプ（M24×1）にも取り付け可能です。SANEI、TOTO、LIXIL、KVK、KAKUDAI、グローエの一部製品に適合します。</div>
+          <div class="faq-a">国内メーカーの泡沫パイプのほとんどに取り付け可能。外ネジタイプ（M22×1.25）に標準対応し、付属アダプターで内ネジタイプ（M24×1）にも対応します。</div>
         </div>
       </div>
     </section>
@@ -716,7 +786,7 @@
     <section id="final-cta">
       <h2>13. 最終CTA</h2>
       <p class="closing-copy">キッチンのお悩みを、蛇口を替えるだけで解決。</p>
-      <p class="closing-sub">取り付けはたったの3ステップ。<br>今日から毎日のキッチン作業が、ナノバブルで変わります。</p>
+      <p class="closing-sub">取り付けはたったの3ステップ。<br>毎日のキッチン作業が、ナノバブルで変わります。</p>
       <div style="width:160px;height:160px;background:#ccc;border:2px dashed #aaa;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;margin:0 auto 24px;">製品画像（メイン）</div>
       <a href="#" class="btn" style="display:block;max-width:480px;margin:0 auto;text-align:center;">Amazonで詳細を見る</a>
     </section>
