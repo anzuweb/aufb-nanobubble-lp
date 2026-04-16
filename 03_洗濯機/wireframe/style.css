@@ -1,0 +1,612 @@
+/* ==============================
+   Base / Reset
+============================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #222;
+  line-height: 1.7;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==============================
+   WF Label（セクション名表示）
+============================== */
+.wf-label {
+  display: block;
+  background: #444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.wf-label--light {
+  background: #777;
+  color: #fff;
+}
+
+/* ==============================
+   Image Placeholder
+============================== */
+.img-placeholder {
+  background: #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.img-fv         { height: 260px; }
+.img-solution   { height: 260px; }
+.img-effect     { height: 200px; }
+.img-nano       { height: 260px; }
+.img-science    { height: 200px; margin-bottom: 1rem; }
+.img-step       { height: 180px; }
+
+/* ==============================
+   Section Common
+============================== */
+section {
+  position: relative;
+}
+
+.section-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 1.2rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+  color: #111;
+  text-align: center;
+}
+
+.section-title--white {
+  color: #fff;
+}
+
+/* ==============================
+   CTA Button
+============================== */
+.btn-cta {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* ==============================
+   FV
+============================== */
+#fv {
+  background: #f5f5f5;
+}
+
+.fv-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fv-text {
+  order: 1;
+}
+
+.fv-img {
+  order: 0;
+}
+
+.fv-images {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.fv-cta-wrap {
+  text-align: center;
+}
+
+.fv-catch {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+.fv-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+  justify-content: center;
+}
+
+.fv-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #888;
+  background: #fff;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 0.5rem;
+}
+
+/* ==============================
+   お悩みセクション
+============================== */
+#worries {
+  background: #ebebeb;
+}
+
+.worries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.worry-card {
+  background: #fff;
+  border-left: 4px solid #555;
+  padding: 1rem 1.1rem;
+  font-size: 0.95rem;
+  border-radius: 2px;
+}
+
+/* ==============================
+   ソリューション紹介
+============================== */
+#solution {
+  background: #fff;
+}
+
+.solution-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.solution-text p {
+  font-size: 0.97rem;
+  color: #444;
+}
+
+/* ==============================
+   効果説明セクション
+============================== */
+#effects {
+  background: #f5f5f5;
+}
+
+.effects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.effect-item {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.effect-body {
+  padding: 1.2rem;
+}
+
+.effect-body h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.7rem;
+}
+
+.effect-body p {
+  font-size: 0.93rem;
+  color: #555;
+}
+
+/* ==============================
+   ナノバブルとは
+============================== */
+#what-is-nanobubble {
+  background: #ebebeb;
+  color: #222;
+}
+
+.nano-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nano-text p {
+  font-size: 0.97rem;
+  color: #444;
+}
+
+/* ==============================
+   科学的検証
+============================== */
+#science {
+  background: #ebebeb;
+}
+
+.science-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.science-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.science-item h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.8rem;
+}
+
+.science-item p {
+  font-size: 0.93rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.note {
+  font-size: 0.82rem !important;
+  color: #888 !important;
+}
+
+/* ==============================
+   お客様の声
+============================== */
+#reviews {
+  background: #fff;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1.4rem;
+}
+
+.review-stars {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.review-source {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+/* ==============================
+   品質アピール
+============================== */
+#quality {
+  background: #f5f5f5;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.quality-item {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+}
+
+.img-quality {
+  height: 160px;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.quality-item h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.6rem;
+}
+
+.quality-item p {
+  font-size: 0.93rem;
+  color: #555;
+}
+
+/* ==============================
+   取り付け方法
+============================== */
+#installation {
+  background: #fff;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+}
+
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.img-step-small {
+  width: 100px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.step-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.step-num {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 0.2rem 0.7rem;
+  border-radius: 3px;
+  width: fit-content;
+}
+
+.step-text {
+  font-size: 0.97rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.step-note {
+  font-size: 0.85rem;
+  color: #777;
+  border-left: 3px solid #bbb;
+  padding-left: 0.9rem;
+}
+
+/* ==============================
+   FAQ（常時展開）
+============================== */
+#faq {
+  background: #ebebeb;
+}
+
+.faq-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.faq-q-static {
+  font-size: 0.97rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.7rem;
+}
+
+.faq-a-static p {
+  font-size: 0.93rem;
+  color: #555;
+  padding-left: 1rem;
+}
+
+/* ==============================
+   クロージング
+============================== */
+#closing {
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.closing-inner {
+  text-align: center;
+}
+
+.closing-catch {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+.closing-body {
+  font-size: 0.97rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==============================
+   PC (768px+)
+============================== */
+@media (min-width: 768px) {
+
+  /* FV */
+  .fv-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .fv-text {
+    order: 0;
+    flex: 1;
+  }
+
+  .fv-img {
+    order: 1;
+    flex: 1;
+  }
+
+
+  .fv-catch {
+    font-size: 1.9rem;
+  }
+
+  .img-fv {
+    height: 360px;
+  }
+
+  /* お悩み：1列のまま */
+  .worries-list {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ソリューション */
+  .solution-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .solution-img {
+    flex: 1;
+  }
+
+  .solution-text {
+    flex: 1;
+  }
+
+  .img-solution {
+    height: 320px;
+  }
+
+  /* 効果説明 */
+  .effects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 科学的検証 */
+  .science-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* お客様の声 */
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 品質アピール */
+  .quality-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ナノバブルとは */
+  .nano-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .nano-text {
+    flex: 1;
+  }
+
+  .nano-img {
+    flex: 1;
+  }
+
+  .img-nano {
+    height: 320px;
+  }
+
+  /* section-title */
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .closing-catch {
+    font-size: 1.8rem;
+  }
+
+}
