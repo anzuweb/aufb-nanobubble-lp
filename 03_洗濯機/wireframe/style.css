@@ -499,6 +499,12 @@ section {
   text-align: center;
 }
 
+.cta-mid-inner {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .closing-catch {
   font-size: 1.4rem;
   color: #111;
@@ -512,6 +518,12 @@ section {
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.closing-sub {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.8rem;
 }
 
 /* ==============================
