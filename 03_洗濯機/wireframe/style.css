@@ -385,6 +385,14 @@ section {
   color: #555;
 }
 
+.quality-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
 /* ==============================
    取り付け方法
 ============================== */
