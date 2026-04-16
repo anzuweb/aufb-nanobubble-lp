@@ -505,6 +505,12 @@ section {
   padding-bottom: 2rem;
 }
 
+.cta-mid-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
 .closing-catch {
   font-size: 1.4rem;
   color: #111;
