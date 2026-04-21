@@ -1,0 +1,246 @@
+/* ==============================
+   Base
+============================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #1a2b4a;
+  line-height: 1.8;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pc-only { display: none; }
+@media (min-width: 768px) {
+  .pc-only { display: inline; }
+  .sp-only { display: none; }
+}
+
+
+/* ==============================
+   FV
+============================== */
+.fv {
+  position: relative;
+  padding: 80px 24px 90px;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eaf0f8 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+.fv-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../../../01_シャワーアダプター/素材/white-water-ripple-surface.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.fv-inner {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.fv-logo {
+  width: 120px;
+  margin: 0 auto 28px;
+}
+
+.fv-tagline {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a2b4a;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.fv-sub {
+  font-size: 0.9rem;
+  color: #4a5a7a;
+  letter-spacing: 0.08em;
+}
+
+@media (min-width: 768px) {
+  .fv {
+    padding: 140px 32px 150px;
+  }
+  .fv-logo {
+    width: 160px;
+    margin-bottom: 40px;
+  }
+  .fv-tagline {
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+  }
+  .fv-sub {
+    font-size: 1rem;
+  }
+}
+
+
+/* ==============================
+   Section 共通
+============================== */
+.section {
+  padding: 72px 24px;
+}
+
+.section:nth-child(even) {
+  background: #f7f9fc;
+}
+
+.section-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: "Noto Serif JP", serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #c9a84c;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+  padding: 0 24px;
+}
+
+.section-label::before,
+.section-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background: #c9a84c;
+}
+
+.section-label::before { left: 0; }
+.section-label::after { right: 0; }
+
+.section-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a2b4a;
+  letter-spacing: 0.04em;
+}
+
+.section-body p {
+  font-size: 0.95rem;
+  line-height: 2;
+  color: #2a3a5a;
+  margin-bottom: 1.2em;
+}
+
+.section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.section-body .lead {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1a2b4a;
+  text-align: center;
+  line-height: 1.9;
+  margin-bottom: 1.8em;
+}
+
+.section-body strong {
+  color: #1a2b4a;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 110px 32px;
+  }
+  .section-head {
+    margin-bottom: 56px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-body p {
+    font-size: 1rem;
+  }
+  .section-body .lead {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* ==============================
+   会社概要テーブル
+============================== */
+.company-table {
+  border-top: 1px solid #d5dfee;
+}
+
+.company-row {
+  display: block;
+  border-bottom: 1px solid #d5dfee;
+  padding: 18px 0;
+}
+
+.company-row dt {
+  font-weight: 700;
+  color: #1a2b4a;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.company-row dd {
+  color: #2a3a5a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .company-row {
+    display: flex;
+    align-items: baseline;
+    padding: 22px 8px;
+  }
+  .company-row dt {
+    flex: 0 0 180px;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .company-row dd {
+    flex: 1;
+    font-size: 1rem;
+  }
+}
