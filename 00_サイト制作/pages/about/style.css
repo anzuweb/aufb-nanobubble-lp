@@ -47,7 +47,7 @@ img {
 .fv-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../../../01_シャワーアダプター/素材/white-water-ripple-surface.jpeg");
+  background-image: url("images/white-water-ripple-surface.jpeg");
   background-size: cover;
   background-position: center;
   opacity: 0.25;
