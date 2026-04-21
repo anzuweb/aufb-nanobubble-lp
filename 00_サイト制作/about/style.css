@@ -77,10 +77,14 @@ img {
   margin-bottom: 16px;
 }
 
-.fv-sub {
-  font-size: 0.9rem;
+.fv-lead {
+  font-size: 0.88rem;
   color: #4a5a7a;
-  letter-spacing: 0.08em;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -95,8 +99,9 @@ img {
     font-size: 2.4rem;
     margin-bottom: 24px;
   }
-  .fv-sub {
+  .fv-lead {
     font-size: 1rem;
+    text-align: center;
   }
 }
 
