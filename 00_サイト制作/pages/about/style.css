@@ -226,6 +226,18 @@ img {
   color: #2a3a5a;
   font-size: 0.95rem;
   line-height: 1.7;
+  word-break: break-all;
+}
+
+.company-row dd a {
+  color: #1a2b4a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.company-row dd a:hover {
+  color: #c9a84c;
 }
 
 @media (min-width: 768px) {
