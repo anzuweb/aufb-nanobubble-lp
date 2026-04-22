@@ -60,19 +60,14 @@ a {
   z-index: 1;
 }
 
-.fv-logo {
-  width: 100px;
-  margin: 0 auto 28px;
-}
-
 .fv-tagline {
   font-family: "Noto Serif JP", serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #1a2b4a;
   letter-spacing: 0.06em;
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .fv-lead {
@@ -89,13 +84,9 @@ a {
   .fv {
     padding: 120px 32px 130px;
   }
-  .fv-logo {
-    width: 140px;
-    margin-bottom: 36px;
-  }
   .fv-tagline {
-    font-size: 2.2rem;
-    margin-bottom: 32px;
+    font-size: 2.6rem;
+    margin-bottom: 36px;
   }
   .fv-lead {
     font-size: 1rem;
