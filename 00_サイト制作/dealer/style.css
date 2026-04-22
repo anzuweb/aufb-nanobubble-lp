@@ -46,11 +46,10 @@ a {
 .fv-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/fv-water-ripple-bg.jpeg");
+  background-image: url("images/fv-white-circles-bg.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.6;
-  mix-blend-mode: multiply;
+  opacity: 1;
   pointer-events: none;
 }
 
